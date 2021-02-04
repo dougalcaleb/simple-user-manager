@@ -2,5 +2,23 @@ doctype html
 html
    head
       title User List
+      link(rel="stylesheet", href="../css/style.css")
    body
       h1 #{userCount} users
+      table
+         tr
+            td User ID
+            td Name
+            td Age
+            td Email
+         for user in users
+            tr
+               td #{user.id}
+               td #{user.name}
+               td #{user.age}
+               td #{user.email}
+               td
+                  a(href="/edit/"+user.id+"/"+user.name+"/"+user.age+"/"+user.email) EDIT
+               td
+                  a(href="/delete/"+user.id) DELETE
+      a(href="/addUser") Add user

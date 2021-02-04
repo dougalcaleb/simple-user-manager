@@ -5,4 +5,10 @@ html
    body
       form(action="/newUser", method="post")
          input(type="text", placeholder="Name", name="userName")
+         br
+         input(type="text", placeholder="Email", name="email")
+         br
+         input(type="number", placeholder="Age", name="age")
+         br
          input(type="submit")
+   a(href="/users") User List
